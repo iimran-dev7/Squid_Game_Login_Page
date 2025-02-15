@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Squid Game Login Page</title>
+</head>
+<body>
+    <div class="loading-container">
+        <div class="loader-content">
+            <div class="shapes-container">
+                <div class="shapes-row">
+                    <div class="loader">
+                        <svg viewBox="0 0 80 80">
+                            <circle id="test" cx="40" cy="40" r="32"></circle>
+                        </svg>
+                    </div>
+                    
+                    <div class="loader triangle">
+                        <svg viewBox="0 0 86 80">
+                            <polygon points="43 8 79 72 7 72"></polygon>
+                        </svg>
+                    </div>
+                    
+                    <div class="loader">
+                        <svg viewBox="0 0 80 80">
+                            <rect x="8" y="8" width="64" height="64"></rect>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="loading-progress">
+                <div class="loading-bar-container">
+                    <div class="loading-bar-segment start"></div>
+                    <div class="loading-bar-segment middle"></div>
+                    <div class="loading-bar-segment end"></div>
+                </div>
+                <div class="loading-text">Loading...</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const segments = document.querySelectorAll('.loading-bar-segment');
+    const loadingContainer = document.querySelector('.loading-container');
+    
+    // Animate segments sequentially
+    setTimeout(() => segments[0].classList.add('active'), 100);
+    setTimeout(() => segments[1].classList.add('active'), 1000);
+    setTimeout(() => segments[2].classList.add('active'), 2000);
+    
+    // Fade out and redirect
+    setTimeout(() => {
+        loadingContainer.classList.add('fade-out');
+    }, 2700);
+
+    // add sign up page
+    setTimeout(() => {
+        window.location.href = 'signup.html';
+    }, 3000);
+
+    // add forgot page
+    const forgotPassword = document.querySelector('.forgot-password');
+    loginBtn.addEventListener('click', () => {
+        window.location.href = 'forgot.html';
+    });
+
+    // redirect to login page from forgot page automatically after reseting password
+    setTimeout(() => {
+        window.location.href = 'login.html';
+    }, 3000);
+
+
+    // redirect to  login page
+    const loginBtn = document.querySelector('.login-btn');
+    loginBtn.addEventListener('click', () => {
+        window.location.href = 'login.html';
+    });
+
+
+</script>
+</html>
+
+
+<!-- developed by @iimran.dev-->
