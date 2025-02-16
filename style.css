@@ -430,12 +430,76 @@
     text-decoration: underline;
   }
 
-  @media (max-width: 768px) {
-    .login-wrapper {
+/* Mobile-first responsive styles */
+@media (max-width: 480px) {
+    .login-wrapper, .signup-wrapper, .forgot-wrapper {
         flex-direction: column;
+        min-height: auto;
+        border-radius: 10px;
+        width: 95%;
+        margin: 0 auto;
     }
     
-    .login-left {
+    .login-left, .signup-left, .forgot-left {
+        padding: 30px 15px;
+        min-height: 200px;
+    }
+    
+    .shape-title {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+    
+    .login-right, .signup-right, .forgot-right {
+        padding: 30px 15px;
+    }
+    
+    .login-form, .signup-form, .forgot-form {
+        padding: 15px;
+    }
+    
+    .login-form h1, .signup-form h1, .forgot-form h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    
+    .subtitle {
+        font-size: 0.9rem;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .form-group {
+        margin-bottom: 25px;
+    }
+    
+    .login-btn, .signup-btn, .reset-btn {
+        padding: 14px;
+        font-size: 1rem;
+        margin: 30px 0 20px;
+    }
+    
+    /* Squid Game Logo Adjustment */
+    .shapes-container, .shapes-container1, .shapes-container2 {
+        transform: scale(0.8);
+        margin-top: -20px;
+    }
+    
+    .shapes-row {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .login-wrapper, .signup-wrapper, .forgot-wrapper {
+        flex-direction: column;
+        min-height: auto;
+    }
+    
+    .login-left, .signup-left, .forgot-left {
         padding: 40px 20px;
         min-height: 250px;
     }
@@ -445,14 +509,19 @@
         margin-bottom: 20px;
     }
     
-    .login-right {
+    .login-right, .signup-right, .forgot-right {
         padding: 40px 20px;
     }
     
-    .login-form h1 {
+    .login-form h1, .signup-form h1, .forgot-form h1 {
         font-size: 2rem;
     }
-  }
+    
+    /* Squid Game Logo Adjustment */
+    .shapes-container, .shapes-container1, .shapes-container2 {
+        transform: scale(0.9);
+    }
+}
 
   @keyframes fadeIn {
     from {
